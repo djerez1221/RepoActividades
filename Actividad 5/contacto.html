@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - Lucía Fernández</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Contacto</h1>
+
+        <nav>
+            <a href="index.html">Quién soy / Servicios</a> |
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>¿Querés contarme sobre tu situación profesional?</h2>
+
+            <p>
+                Completá el siguiente formulario y escribime brevemente qué
+                estás buscando o qué dificultad estás atravesando. Con esta
+                información voy a poder conocer tu caso y evaluar cómo puedo
+                acompañarte.
+            </p>
+
+            <p>
+                No es necesario que tengas definido exactamente qué necesitás
+                antes de contactarme. Si estás atravesando un momento de dudas
+                o querés explorar distintas alternativas profesionales,
+                también podés escribirme.
+            </p>
+        </section>
+
+        <section>
+            <h2>Formulario de contacto</h2>
+
+            <form action="#" method="post">
+
+                <p>
+                    <label for="nombre">Nombre y apellido:</label><br>
+                    <input type="text" id="nombre" name="nombre" required>
+                </p>
+
+                <p>
+                    <label for="email">Correo electrónico:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="motivo">Motivo de consulta:</label><br>
+                    <select id="motivo" name="motivo" required>
+                        <option value="">Seleccioná una opción</option>
+                        <option value="cambio-empleo">
+                            Quiero cambiar de empleo
+                        </option>
+                        <option value="reorientar-carrera">
+                            Quiero reorientar mi carrera
+                        </option>
+                        <option value="curriculum">
+                            Necesito mejorar mi currículum
+                        </option>
+                        <option value="entrevista">
+                            Quiero prepararme para una entrevista
+                        </option>
+                        <option value="objetivos">
+                            Necesito definir mis objetivos profesionales
+                        </option>
+                        <option value="busqueda">
+                            Quiero desarrollar una estrategia de búsqueda laboral
+                        </option>
+                        <option value="otro">
+                            Otro motivo
+                        </option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="situacion">Situación laboral actual:</label><br>
+                    <select id="situacion" name="situacion" required>
+                        <option value="">Seleccioná una opción</option>
+                        <option value="empleado">
+                            Actualmente tengo empleo
+                        </option>
+                        <option value="buscando">
+                            Estoy buscando empleo
+                        </option>
+                        <option value="nuevo-empleo">
+                            Estoy por comenzar un nuevo empleo
+                        </option>
+                        <option value="independiente">
+                            Trabajo de manera independiente
+                        </option>
+                        <option value="prefiero-no-indicarlo">
+                            Prefiero no indicarlo
+                        </option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="experiencia">Experiencia profesional:</label><br>
+                    <textarea id="experiencia"
+                              name="experiencia"
+                              rows="6"
+                              cols="50"
+                              required></textarea>
+                </p>
+
+                <p>
+                    Contame brevemente a qué te dedicás actualmente y cuál fue
+                    tu experiencia laboral principal.
+                </p>
+
+                <p>
+                    <label for="objetivo">
+                        ¿Qué te gustaría conseguir o resolver?
+                    </label><br>
+                    <textarea id="objetivo"
+                              name="objetivo"
+                              rows="6"
+                              cols="50"
+                              required></textarea>
+                </p>
+
+                <p>
+                    Explicá qué objetivo profesional tenés o qué dificultad
+                    te gustaría trabajar.
+                </p>
+
+                <p>
+                    <label for="contacto">
+                        ¿Cómo preferís que te contacte?
+                    </label><br>
+                    <select id="contacto" name="contacto" required>
+                        <option value="">Seleccioná una opción</option>
+                        <option value="email">
+                            Por correo electrónico
+                        </option>
+                        <option value="telefono">
+                            Por teléfono
+                        </option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="telefono">Teléfono:</label><br>
+                    <input type="tel" id="telefono" name="telefono">
+                </p>
+
+                <p>
+                    Ingresá tu número de teléfono si elegiste esta opción
+                    de contacto.
+                </p>
+
+                <p>
+                    <label for="mensaje">Mensaje adicional:</label><br>
+                    <textarea id="mensaje"
+                              name="mensaje"
+                              rows="6"
+                              cols="50"></textarea>
+                </p>
+
+                <p>
+                    Podés agregar cualquier información que consideres importante.
+                </p>
+
+                <p>
+                    <input type="submit" value="Enviar consulta">
+                </p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            <a href="index.html">Volver a Quién soy / Servicios</a>
+        </p>
+
+        <p>Lucía Fernández - Orientación laboral y desarrollo profesional</p>
+    </footer>
+
+</body>
+</html>
