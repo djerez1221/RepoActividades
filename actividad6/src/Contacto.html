@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Mariana Sosa</title>
+    <link rel="stylesheet" href="./estilos/index.css">
+</head>
+<body>
+    <header class="encabezado-principal">
+        <a href="./index.html" aria-label="Ir al inicio">
+            <img src="./recursos/imagenes/MarinaSosaLogo.png" alt="logo Mariana Sosa">       
+        </a>
+        <nav class="vinculos">
+            <a href="./index.html">Quién soy</a>              
+            <a href="./contacto.html">Contacto</a>   
+        </nav>  
+    </header>
+    <main class="contenido-principal">
+        <h1>¿Necesitás una traducción o intérprete?</h1>
+        <p>
+            Completá el formulario contándome los detalles 
+            y me pondré en contacto a la brevedad para enviarte un presupuesto sin compromiso.
+        </p>
+        <div class="contenedor-form">
+            <form action="./contacto.html" method="post">
+                <label for="id-nombre">Nombre Completo</label>
+                <input type="text" name="nombre" id="id-nombre">
+
+                <label for="id-correo">Correo electrónico</label>
+                <input type="email" name="correo" id="id-correo">
+
+                <label for="id-tel">Teléfono</label>
+                <input type="tel" name="telefono" id="id-tel">
+                
+                <label for="id-serv">Tipo de Servicio</label>
+                <select name="servicio" id="id-serv">
+                    <option value="TP">Traducción Pública</option>
+                    <option value="TC/T">Traducción comercial/técnica</option>
+                    <option value="I">Interpretación</option>
+                    <option value="O">Otros</option>
+                </select>
+
+                <label for="id-idioma">Idioma de origen y destino</label>
+                <input type="text" name="idioma" id="id-idioma">
+
+                <label for="id-urgencia">Urgencia del pedido</label>
+                <select name="urgencia" id="id-urgencia">
+                    <option value="NO-URG">No urgente</option>
+                    <option value="SEM">Dentro de la semana</option>
+                    <option value="URG">Urgente (24-48hs)</option>              
+                </select>
+
+                <label for="id-descrip">Descripción de la consulta</label>
+                <textarea name="descripcion" id="id-descrip"></textarea>
+
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+
+        <section class="seccion-ubicaciones">
+            <h2>Dónde encontrarme</h2>
+            <p>Atención presencial en dos sedes en Córdoba Capital, con opción virtual para todo el país.</p>
+            <div class="ubicaciones-grid">
+
+                <div class="ubicacion-card">
+                    <h4>Sede Nueva Córdoba</h4>
+                    <p>Av. Vélez Sarsfield 392</p>
+                    <p>WhatsApp: 351-555-3333</p>
+                </div>
+            </div>
+           <iframe src="https://www.google.com/maps/embed?pb=!4v1790090968796!6m8!1m7!1sPx3g8xISusLgmpo96V2oNg!2m2!1d-31.41993245400044!2d-64.18876575826728!3f318.6887854445847!4f0!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </section>
+        
+    </main>
+    <footer class="pie-principal">
+        <ul>
+            <li><a href="https://instagram.com/mariana.sosa.traductora" target="_blank">@mariana.sosa.traductora</a></li>
+            <li>Tel: 351-555-3333</li>
+            <li> Nueva Córdoba - Córdoba</li>
+        </ul>
+    </footer>
+</body>
+</html>
