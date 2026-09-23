@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- Declara que este documento usa HTML5 -->
+<html lang="es">
+<!-- Etiqueta raíz del documento, en idioma español -->
+
+<head>
+    <!-- Metadatos de la página: no visibles, pero necesarios para el navegador -->
+    <meta charset="UTF-8">
+    <!-- Codificación de caracteres para mostrar tildes y ñ correctamente -->
+    <title>Contacto - Sofía Martínez</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Importa las mismas tipografías que la página 1, para mantener coherencia visual -->
+
+    <link rel="stylesheet" href="recursos/estilos/index.css">
+    <!-- Vincula la misma hoja de estilos externa usada en index.html -->
+</head>
+
+<body>
+    <!-- Contenido visible de la página -->
+
+    <header class="encabezado">
+        <!-- Misma clase "encabezado" que en index.html, para mantener el estilo consistente -->
+        <h1>Contacto</h1>
+        <nav class="menu-navegacion">
+            <a href="index.html">Quién soy / Servicios</a> |
+            <a href="contacto.html">Contacto</a>
+            <!-- Enlaces que permiten moverse entre las dos páginas del sitio -->
+        </nav>
+    </header>
+
+    <div class="contenedor">
+    <!-- class="contenedor": centra y limita el ancho del contenido, igual que en la página 1 -->
+
+    <section class="seccion-presentacion">
+        <!-- Sección principal con la explicación y el formulario -->
+        <h2>Hablemos de tu proyecto</h2>
+        <p>
+            ¿Tenés un negocio y querés renovar tu identidad visual o el packaging de tus
+            productos? Completá el siguiente formulario y me pondré en contacto con vos
+            a la brevedad para conversar sobre tu proyecto.
+        </p>
+
+        <form class="formulario-contacto" action="mailto:contacto@sofiamartinez.com" method="post" enctype="text/plain">
+            <!-- class="formulario-contacto": selector de CLASE que organiza el formulario en columna.
+                 <form> define el formulario.
+                 action="mailto:..." indica que los datos se enviarán por correo electrónico
+                 (no requiere JavaScript ni un servidor backend).
+                 method="post" envía los datos como contenido del mensaje.
+                 enctype="text/plain" hace que el mensaje se envíe en texto plano y legible -->
+
+            <div class="campo-formulario">
+                <!-- class="campo-formulario": agrupa label + input en columna, con espaciado -->
+                <label for="nombre">Nombre completo:</label>
+                <!-- <label> describe qué debe completar el usuario en el campo asociado.
+                     El atributo "for" lo conecta con el "id" del <input> correspondiente -->
+                <input type="text" id="nombre" name="nombre" required>
+                <!-- <input type="text"> crea un campo de texto simple.
+                     "name" identifica el dato al enviarlo, "required" lo hace obligatorio -->
+            </div>
+
+            <div class="campo-formulario">
+                <label for="negocio">Nombre del negocio o emprendimiento:</label>
+                <input type="text" id="negocio" name="negocio">
+                <!-- Campo opcional (sin "required") para el nombre del negocio -->
+            </div>
+
+            <div class="campo-formulario">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <!-- type="email" valida automáticamente que el texto tenga formato de correo -->
+            </div>
+
+            <div class="campo-formulario">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+                <!-- type="tel" indica que el campo espera un número de teléfono -->
+            </div>
+
+            <div class="campo-formulario">
+                <label for="servicio">Servicio de interés:</label>
+                <select id="servicio" name="servicio">
+                    <!-- <select> crea un menú desplegable con opciones predefinidas -->
+                    <option value="identidad">Identidad Visual y Logotipos</option>
+                    <option value="packaging">Diseño de Packaging</option>
+                    <option value="consultoria">Consultoría de Marca</option>
+                    <option value="otro">Otro / No estoy seguro</option>
+                    <!-- <option> define cada alternativa dentro del menú -->
+                </select>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="mensaje">Contame sobre tu proyecto:</label>
+                <textarea id="mensaje" name="mensaje"></textarea>
+                <!-- <textarea> crea un cuadro de texto de varias líneas.
+                     El alto y el ancho ya no se definen aquí con "rows"/"cols" (serían estilo
+                     dentro del HTML); se controlan desde index.css con la clase .campo-formulario textarea -->
+            </div>
+
+            <p>
+                <input type="submit" value="Enviar mensaje">
+                <!-- Botón que envía el formulario -->
+                <input type="reset" value="Borrar formulario">
+                <!-- Botón que limpia todos los campos completados -->
+            </p>
+
+        </form>
+    </section>
+
+    </div>
+    <!-- Cierre de class="contenedor" -->
+
+    <footer class="pie-pagina">
+        <!-- Misma clase "pie-pagina" que en index.html -->
+        <p><a href="index.html">Volver a Quién soy / Servicios</a></p>
+    </footer>
+
+</body>
+</html>

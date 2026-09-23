@@ -1,0 +1,298 @@
+/* ==========================================================================
+   HOJA DE ESTILOS - Sofía Martínez | Diseño Gráfico y Consultoría de Marca
+   ==========================================================================
+   Organización del archivo:
+   1. Reseteo básico
+   2. Variables globales (colores, tipografías)
+   3. Selectores de TIPO (estilos globales)
+   4. Selectores de CLASE (bloques principales del layout)
+   5. Selectores COMBINADOS (componentes y estados)
+   6. Responsive básico
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. RESETEO BÁSICO
+   ========================================================================== */
+
+* ,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* box-sizing: border-box = MODELO DE CAJA ALTERNATIVO.
+       El padding y el border se incluyen dentro del ancho/alto total
+       del elemento, en lugar de sumarse por fuera. */
+}
+
+ul {
+    list-style: none;
+    /* Quitamos las viñetas por defecto de las listas */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    /* Los enlaces heredan el color del texto en vez del azul/violeta por defecto */
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ==========================================================================
+   2. VARIABLES GLOBALES
+   ========================================================================== */
+
+:root {
+    /* Colores */
+    --color-fondo: #faf6f0;
+    --color-primario: #c1694f;
+    --color-primario-oscuro: #a85640;
+    --color-secundario: #4a5759;
+    --color-acento: #8a9a5b;
+    --color-texto: #333333;
+    --color-blanco: #ffffff;
+    --color-borde: #e0d8cc;
+
+    /* Tipografías */
+    --fuente-titulos: "Playfair Display", Georgia, serif;
+    --fuente-texto: "Poppins", Arial, sans-serif;
+}
+
+
+/* ==========================================================================
+   3. SELECTORES DE TIPO (estilos globales)
+   ========================================================================== */
+
+body {
+    font-family: var(--fuente-texto);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.7;
+}
+
+h1 {
+    font-family: var(--fuente-titulos);
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.6rem;
+    color: var(--color-primario);
+    margin-bottom: 0.8rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* ==========================================================================
+   4. SELECTORES DE CLASE (bloques principales del layout)
+   ========================================================================== */
+
+.encabezado {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.menu-navegacion {
+    margin-top: 1rem;
+}
+
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.tarjeta {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 1.8rem;
+    margin-bottom: 1.8rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.seccion-presentacion {
+    /* Hereda el estilo general de .tarjeta mediante selector combinado (ver abajo) */
+}
+
+.seccion-servicios {
+    /* Bloque de servicios: usa .tarjeta como base */
+}
+
+.seccion-trayectoria {
+    /* Bloque de trayectoria: usa .tarjeta como base */
+}
+
+.lista-servicios li {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--color-acento);
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.pie-pagina {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+
+/* ==========================================================================
+   5. SELECTORES COMBINADOS (componentes y estados)
+   ========================================================================== */
+
+/* Combinación de CLASE + TIPO: aplica solo a los h1 dentro de .encabezado */
+.encabezado h1 {
+    margin-bottom: 0.3rem;
+}
+
+/* Combinación descendiente: enlaces dentro del menú de navegación */
+.menu-navegacion a {
+    color: var(--color-blanco);
+    font-weight: 600;
+    padding: 0.3rem 0.6rem;
+    transition: color 0.2s ease;
+}
+
+/* Combinación con pseudo-clase :hover */
+.menu-navegacion a:hover {
+    color: var(--color-acento);
+}
+
+/* Aplica la apariencia de tarjeta a las tres secciones principales de la página 1 */
+.seccion-presentacion,
+.seccion-servicios,
+.seccion-trayectoria {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 1.8rem;
+    margin-bottom: 1.8rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Combinación descendiente: texto en negrita dentro de la lista de servicios */
+.lista-servicios li strong {
+    color: var(--color-primario-oscuro);
+    display: block;
+    font-size: 1.05rem;
+}
+
+/* Combinación descendiente: etiquetas dentro del formulario */
+.formulario-contacto label {
+    font-weight: 600;
+    color: var(--color-secundario);
+}
+
+/* Combinación por atributo + descendiente: campos de texto del formulario */
+.formulario-contacto input[type="text"],
+.formulario-contacto input[type="email"],
+.formulario-contacto input[type="tel"],
+.formulario-contacto select,
+.formulario-contacto textarea {
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    padding: 0.6rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+    background-color: var(--color-fondo);
+}
+
+/* Tamaño del textarea, definido por CSS en lugar de los atributos HTML rows/cols */
+.formulario-contacto textarea {
+    min-height: 130px;
+    width: 100%;
+    resize: vertical;
+}
+
+/* Combinación con pseudo-clase :focus */
+.formulario-contacto input:focus,
+.formulario-contacto select:focus,
+.formulario-contacto textarea:focus {
+    outline: none;
+    border-color: var(--color-primario);
+}
+
+/* Botón de envío */
+.formulario-contacto input[type="submit"] {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.formulario-contacto input[type="submit"]:hover {
+    background-color: var(--color-primario-oscuro);
+}
+
+/* Botón de borrado */
+.formulario-contacto input[type="reset"] {
+    background-color: transparent;
+    color: var(--color-secundario);
+    border: 1px solid var(--color-secundario);
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+/* Enlace dentro del pie de página */
+.pie-pagina a {
+    color: var(--color-acento);
+    font-weight: 600;
+}
+
+.pie-pagina a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   6. RESPONSIVE BÁSICO
+   ========================================================================== */
+
+@media (max-width: 600px) {
+    .encabezado h1 {
+        font-size: 1.6rem;
+    }
+
+    .contenedor {
+        padding: 1.2rem 1rem;
+    }
+
+    .formulario-contacto input[type="reset"] {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+}

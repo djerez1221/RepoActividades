@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- Declara que este documento usa HTML5 -->
+<html lang="es">
+<!-- Etiqueta raíz del documento. lang="es" indica que el contenido está en español -->
+
+<head>
+    <!-- La sección <head> contiene metadatos: información que no se ve en la página, 
+         pero que el navegador y los buscadores usan -->
+    <meta charset="UTF-8">
+    <!-- Define la codificación de caracteres para que tildes y ñ se muestren correctamente -->
+    <title>Sofía Martínez - Diseño Gráfico y Consultoría de Marca</title>
+    <!-- Texto que aparece en la pestaña del navegador -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Importa las tipografías Playfair Display (títulos) y Poppins (texto) desde Google Fonts -->
+
+    <link rel="stylesheet" href="recursos/estilos/index.css">
+    <!-- Vincula la hoja de estilos externa ubicada en recursos/estilos/index.css -->
+</head>
+
+<body>
+    <!-- La sección <body> contiene todo el contenido visible de la página -->
+
+    <header class="encabezado">
+        <!-- class="encabezado": selector de CLASE para el bloque principal de header -->
+        <h1>Sofía Martínez - Diseño Gráfico y Consultoría de Marca</h1>
+        <!-- <h1> es el título principal de la página (solo debe haber uno por página) -->
+        <nav class="menu-navegacion">
+            <!-- class="menu-navegacion": selector de CLASE para el bloque de navegación -->
+            <a href="index.html">Quién soy / Servicios</a> |
+            <a href="contacto.html">Contacto</a>
+            <!-- <a href="..."> crea un enlace hacia otra página (atributo href = destino) -->
+        </nav>
+    </header>
+
+    <div class="contenedor">
+    <!-- class="contenedor": centra el contenido y limita su ancho máximo -->
+
+    <section class="seccion-presentacion">
+        <!-- class="seccion-presentacion": selector de CLASE nombrado según la función del bloque -->
+        <h2>Quién soy</h2>
+        <!-- <h2> es un subtítulo, jerárquicamente debajo del <h1> -->
+        <p>
+            <!-- <p> define un párrafo de texto -->
+            Hola, soy Sofía. Ayudo a marcas emergentes y emprendedores a potenciar sus negocios
+            a través de un diseño estratégico y funcional. Creo firmemente que una buena
+            identidad visual no solo debe ser atractiva, sino también contar la historia
+            detrás de cada proyecto para conectar de manera genuina con los clientes.
+        </p>
+    </section>
+
+    <section class="seccion-servicios">
+        <!-- Sección que detalla los servicios ofrecidos -->
+        <h2>Servicios</h2>
+        <ul class="lista-servicios">
+            <!-- class="lista-servicios": permite estilizar cada ítem con un borde de acento -->
+            <li>
+                <!-- <li> define cada elemento (ítem) de la lista -->
+                <strong>Identidad Visual y Logotipos:</strong>
+                <!-- <strong> resalta el texto en negrita y le da importancia semántica -->
+                Creación de marcas desde cero, manual de uso y aplicaciones básicas.
+            </li>
+            <li>
+                <strong>Diseño de Packaging:</strong>
+                Desarrollo de etiquetas, envases y cajas optimizados para producción y venta.
+            </li>
+            <li>
+                <strong>Consultoría de Marca:</strong>
+                Auditoría de comunicación visual y asesoramiento estratégico personalizado.
+            </li>
+        </ul>
+    </section>
+
+    <section class="seccion-trayectoria">
+        <!-- Sección que describe la experiencia profesional de Sofía -->
+        <h2>Trayectoria</h2>
+        <p>
+            Cuento con más de 8 años de experiencia trabajando de forma independiente con
+            proyectos del sector gastronómico, diseño de autor y comercios locales. Me
+            apasiona acompañar a los creadores en el crecimiento de sus emprendimientos
+            mediante soluciones visuales claras y efectivas.
+        </p>
+    </section>
+
+    </div>
+    <!-- Cierre de class="contenedor" -->
+
+    <footer class="pie-pagina">
+        <!-- class="pie-pagina": selector de CLASE para el bloque de cierre del sitio -->
+        <p>¿Querés renovar la identidad visual de tu negocio? <a href="contacto.html">Contactame aquí</a>.</p>
+        <!-- Enlace de cierre que invita al usuario a ir a la página de contacto -->
+    </footer>
+
+</body>
+</html>
