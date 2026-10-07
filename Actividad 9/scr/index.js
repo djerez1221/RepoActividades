@@ -1,0 +1,15 @@
+//suma
+console.log(2+3)
+console.log(25+3)
+//resta
+console.log(2-2)
+console.log(7-4)
+//multiplicacion
+console.log(2*3)
+console.log(2*2)
+//division
+console.log(12/2)
+console.log(25/5)
+//resto
+console.log(60%2)
+console.log(20%2)
